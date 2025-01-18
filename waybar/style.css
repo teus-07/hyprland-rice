@@ -44,10 +44,11 @@ window#waybar.chromium {
     margin: 10px 5px;
     border-radius: 20px;
     transition: all ease-in-out .3s;
+    color: #a6adc8;
 }
 
 #workspaces button.active{
-     min-width: 50px;
+     min-width: 40px;
      border-radius: 15px;
      color: #1e1e2e;
      background: #cdd6f4;
@@ -89,7 +90,7 @@ window#waybar.chromium {
 
 #workspaces {
      margin-top: 5px; 
-     border-radius: 20px;
+     border-radius: 15px;
      background-color: rgba(30, 30, 46, 0.8);
      padding: 0;
 
