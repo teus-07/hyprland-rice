@@ -1,5 +1,0 @@
-2025-01-17 18:17:15.127 [info] Started local extension host with pid 23815.
-2025-01-17 18:17:15.323 [info] Started initializing default profile extensions in extensions installation folder. file:///home/mateus/.vscode-oss/extensions
-2025-01-17 18:17:15.701 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/mateus/.vscode-oss/extensions
-2025-01-17 18:17:18.234 [info] [perf] Render performance baseline is 38ms
-2025-01-17 18:17:21.068 [error] Timed out waiting for authentication provider to register
