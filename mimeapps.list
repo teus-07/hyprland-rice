@@ -1,0 +1,5 @@
+[Added Associations]
+image/jpeg=gimp-3.desktop;gimp-2.desktop;
+
+[Default Applications]
+image/jpeg=gimp-3.desktop;

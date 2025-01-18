@@ -1,0 +1,13 @@
+[General]
+LastUsedVersion=210800
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/anime-girl-walpapper.jpg
+Name1[$e]=anime-girl-walpapper.jpg
+
+[SideBar]
+InformationSplitterSizes=0,0
