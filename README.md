@@ -1,0 +1,2 @@
+# hyprland-rice
+hyprland config
