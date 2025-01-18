@@ -1,4 +1,5 @@
-* {
+
+*{
     /* `otf-font-awesome` is required to be installed for icons */
     border: none;
     border-radius: 0px;
@@ -6,7 +7,6 @@
     font-weight: bold;
     font-size: 14px;
     min-height: 10px;
-
 }
 
 window#waybar {
@@ -80,10 +80,11 @@ window#waybar.chromium {
 #power-profiles-daemon,
 #mpd,
 #custom-power {
+    color: #cdd6f4;
     margin-top: 5px;
     /*border-top: 2px solid #b4befe;
     border-bottom: 2px solid #b4befe;*/
-    background-color: #1e1e2e;
+    background-color: #313244;
     padding: 0 10px 0 10px;
 
 }
@@ -91,7 +92,7 @@ window#waybar.chromium {
 #workspaces {
      margin-top: 5px; 
      border-radius: 15px;
-     background-color: rgba(30, 30, 46, 0.8);
+     background-color: rgba(49, 50, 68, 0.6);
      padding: 0;
 
 }
@@ -119,12 +120,11 @@ label:focus {
 }
 
 #cpu {
-    color: #89dceb;
+   
 
 }
 
 #memory{
-    color: #a6e3a1;
     margin-right: 10px;
       border-radius: 0px 1rem 1rem 0px;
 }
@@ -134,8 +134,7 @@ label:focus {
 }
 
 #network {
-    color: #f38ba8;
-}
+    }
 
 #network.disconnected {
     background-color: #f53c3c;
@@ -144,8 +143,7 @@ label:focus {
 #pulseaudio {
     transition: all ease .5s;
 
-    color: #f9e2af;
-}
+    }
 
 #pulseaudio.muted {
     color: #fab387;
@@ -159,8 +157,7 @@ label:focus {
     }
 
 #tray {
-     color: #ffffff;
-}
+     }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -172,7 +169,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-   
+    color: #fff;
     border-radius: 1rem 0 0 1rem;
 
 

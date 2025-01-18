@@ -124,17 +124,18 @@
     },
     "cpu": {
         "format-icons": "",
-        "format": "{usage}% {icon}",
+	"format": "{usage}% <span color=\"#89b4fa\">{icon}</span>",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% <span color=\"#94e2d5\"></span>"
     },
 
     "network": {
+	"format-icons": "",
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "{ipaddr}/{cidr} <span color=\"#74c7ec\"> </span>",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -143,7 +144,7 @@
        "pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
-		"format": "{icon}  {volume}%",
+		"format": "<span color=\"#f9e2af\">{icon}</span>  {volume}%",
 		"format-muted": "muted",
 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
