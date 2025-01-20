@@ -2,18 +2,18 @@
 /*
 
 # Un-ignore specific directories and their contents
-
+!swaync/
 !waybar/
-!hypra/
+!hypr/
 !nvim/
 !kitty/
 !wlogout/
 !waypaper/
 
 # Ensure files inside the allowed directories are included
-
+!swaync/**
 !waybar/**
-!hypra/**
+!hypr/**
 !nvim/**
 !kitty/**
 !wlogout/**
