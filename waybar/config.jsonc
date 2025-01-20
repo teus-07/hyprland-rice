@@ -1,35 +1,30 @@
 // -*- mode: jsonc -*-
 {   //"spacing": 1,
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 10,
-    "mod": "dock",
-    "font-weight": "normal",
-    "gtk-layer-shell": "true",
-    "exclusive": true,
-    "passtrough": false,
+	"layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	"height": 10,
+	"mod": "dock",
+	"font-weight": "normal",
+	"gtk-layer-shell": "true",
+	"exclusive": true,
+	"passtrough": false,
     // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": [
-	"custom/launcher",    
-        "hyprland/workspaces",
-	"custom/spotify",
-        "hyprland/mode",
-        "sway/scratchpad",
-        "custom/media"
+    "modules-left": [    
+	    "hyprland/workspaces",
+	    "custom/spotify"
     ],
     "modules-center": [
-	"clock"
+	    "clock"
     ],
     "modules-right": [ 
-        "idle_inhibitor",
-        "pulseaudio",
-        "network",
-        "cpu",
-        "memory",
-        "tray",
-	"custom/power"
+	    "custom/notification",
+	    "pulseaudio",
+	    "network",
+	    "cpu",
+	    "memory",
+	    "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -48,101 +43,108 @@
     //         "default": ""
     //     }
     // },
-  
- "hyprland/workspaces": {
-	         "format": "{icon}",
-	         "sort-by-number": true,
-	         "active-only": false,
-	         "format-icons": {
-	             "1": "1",
-	             "2": "2",
-	             "3": "3",
-	             "4": "4",
-	             "5": "5",
-	             "6": "6",
-	             "7": "7",
-	             "8": "8",
-	             "9": "9",
-	             "10": "10",
-	             "urgent": "  ",
-	             "focused": "  ",
-	             "default": "  "
-	         },
-	         "on-click": "activate"
+
+    "hyprland/workspaces": {
+	    "format": "{icon}",
+	    "sort-by-number": true,
+	    "active-only": false,
+	    "format-icons": {
+		    "1": "1",
+		    "2": "2",
+		    "3": "3",
+		    "4": "4",
+		    "5": "5",
+		    "6": "6",
+		    "7": "7",
+		    "8": "8",
+		    "9": "9",
+		    "10": "10",
+		    "urgent": "  ",
+		    "focused": "  ",
+		    "default": "  "
 	    },
-    
-       "custom/spotify": {
-        "exec": "python ~/.config/waybar/mediaplayer.py --player spotify",
-        "format": "{}",
-        "max-length": 35,
-        "return-type": "json",
-        "on-click": "playerctl previous",
-        "on-click-right": "playerctl next",
-        "on-click-middle": "playerctl play-pause"
-      //"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
-      //"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec"
-  },
-
-   
-
-        "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+	    "on-click": "activate"
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+
+    "custom/spotify": {
+	    "exec": "python ~/.config/waybar/mediaplayer.py --player spotify",
+	    "format": "{}",
+	    "max-length": 35,
+	    "return-type": "json",
+	    "on-click": "playerctl previous",
+	    "on-click-right": "playerctl next",
+	    "on-click-middle": "playerctl play-pause"
     },
+
+
+
+    "idle_inhibitor": {
+	    "format": "{icon}",
+	    "format-icons": {
+		    "activated": "",
+		    "deactivated": ""
+	    }
+    },
+
+
+
     "clock": {   
-    "format": " {:%A - %d  %b,  %H:%m}", 
-    "tooltip": "true",
-    "timezone": "local"    
+	    "format": " {:%A - %d  %b,  %H:%m}", 
+	    "tooltip": "true",
+	    "timezone": "local"    
     },
     "cpu": {
-        "format-icons": "",
-	"format": "{usage}% <span color=\"#89b4fa\">{icon}</span>",
-        "tooltip": false
+	    "format-icons": "",
+	    "format": "{usage}% <span color=\"#89b4fa\">{icon}</span>",
+	    "tooltip": false
     },
     "memory": {
-        "format": "{}% <span color=\"#94e2d5\"></span>"
+	    "format": "{}%<span color=\"#94e2d5\">  </span>"
     },
 
     "network": {
-	"format-icons": "",
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} <span color=\"#74c7ec\"> </span>",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+	    "format-icons": "",
+	// "interface": "wlp2*", // (Optional) To force the use of this interface
+	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "<span color=\"#74c7ec\"></span>",
+	"tooltip-format": "{ifname} via {gwaddr} ",
+	"format-linked": "{ifname} (No IP) ",
+	"format-disconnected": "Disconnected ⚠",
+	"format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-       "pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-		"format": "<span color=\"#f9e2af\">{icon}</span>  {volume}%",
-		"format-muted": "muted",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"format-icons": {
-			"default": ["", "", ""]
-		}
-	},
-	
-      "custom/launcher":{
-        "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi",
-        "tooltip": false
+
+    "pulseaudio": {
+	    "tooltip": false,
+	    "scroll-step": 5,
+	    "format": "<span color=\"#f9e2af\">{icon}</span> {volume}%",
+	    "format-muted": "muted",
+	    "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	    "format-icons": {
+		    "default": ["", "", ""]
+	    }
     },
 
     "custom/power": {
-         "format": " ",
-	 "on-click":"wlogout",
-	 "tooltip": false
+	    "format": " ",
+	    "on-click":"wlogout",
+	    "tooltip": false
     },
-},
-		    
+    "custom/notification": {
+	    "tooltip": false,
+	    "format": "{icon}",
+	    "format-icons": {
+		    "notification": "  ",
+		    "none": "  ",
+		    "dnd-notification": "  ",
+		    "dnd-none": "  "
+	    },
+	    "return-type": "json",
+	    "exec-if": "which swaync-client",
+	    "exec": "swaync-client -swb",
+	    "on-click": "sleep 0.1 && swaync-client -t -sw",
+	    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+	    "escape": true
+    } 
+}
+
 
