@@ -41,15 +41,17 @@ window#waybar.chromium {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button{
-	padding: 8px;
+	margin-right: 6px;
+	padding: 6px;
 	border-radius: 20px;
 	transition: all ease-in-out .3s;
 	color: #a6adc8;
 }
 
 #workspaces button.active{
-	min-width: 30px;
-	border-radius: 20px;
+	padding: 5px;
+	min-width: 40px;
+	border-radius: 16px;
 	color: #1e1e2e;
 	background: #cdd6f4;
 	/*font-weight: bold;*/
@@ -71,17 +73,17 @@ window#waybar.chromium {
 #network,
 #pulseaudio,
 #custom-notification {
-	margin: 8px 0;
+	margin: 5px 0;
 	color: #cdd6f4;
 	/*border-top: 2px solid #b4befe;
 	border-bottom: 2px solid #b4befe;*/
 	background-color: #313244;
-	padding:5px 8px;
-
+	padding:5px 7px;
+	opacity: 0.9;
 }
 
 #workspaces {
-	margin: 8px 15px 8px 8px;
+	margin: 5px 0 0 0;
 	border-radius: 15px;
 	background-color: rgba(49, 50, 68, 0.6);
 	padding:0;
@@ -100,7 +102,7 @@ window#waybar.chromium {
 
 #clock {
 	font-weight: bold;
-	color: #cba6f7;
+	color: #89dceb;
 	border-radius: 6px;
 	/*border: 2px solid #b4befe;*/	
 
