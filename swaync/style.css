@@ -1,0 +1,169 @@
+@keyframes oscilar-rgb {
+  0%   { color: rgb(255, 0, 0); }
+  33%  { color: rgb(0, 255, 0); }
+  66%  { color: rgb(0, 0, 255); }
+  100% { color: rgb(255, 0, 0); }
+}
+
+
+@define-color bgc rgba(49, 50 , 68 , 0.30);
+@define-color bgc1 #45475a;
+@define-color borderc #cba6f7;
+@define-color txtc #cdd6f4;
+@define-color txtc1 #11111b;
+@define-color fg1 #bac2de;
+
+* {
+  font-family: JetBrainsMonoNerdFontMono;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+  background: @bgc;B
+}
+.notification {
+  background-color: rgba(49, 50, 68, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notification-row {
+  outline: none;
+  margin: 20px;
+  padding: 0;
+
+}
+.notification-row:hover {
+ background: rgba(49, 50, 68, 1);
+  transition: ease-in-out 3s;
+}
+
+.notification-content {
+  background: @bgc;
+  padding: 12px;
+  margin: ;
+}
+
+.notification-action {
+  color: @txtc;
+  background: transparent;
+}
+
+.close-button {
+  background: @;
+  color: @txtc;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 20px;
+  margin-top: 9px;
+  margin-right: 5px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @borderc;
+  color: @textc;
+  transition: all .15s ease-in-out;
+  border: none
+}
+
+.summary {
+  padding-top: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  color: @txtc;
+  background: transparent;
+  margin-left: 1rem;
+}
+
+.time {
+  background-color: transparent;
+  font-size: 11px;
+  color: @fg1;
+  margin-right: 40px
+}
+
+.body {
+  font-weight: normal;
+  font-size: 12px;
+  color: @txtc1;
+  background: transparent;
+  margin: 0.3rem 0rem 0rem 1rem;
+
+}
+
+.control-center {
+  background-color: @bgc;
+  background: rgba(37, 37, 37, 0.25); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),  
+       inset 0 0 5px rgba(255, 255, 255, 0.05); 
+  border-radius: 20px;
+  opacity: .9;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+.blank-window {
+  background: transparent;
+}
+
+.widget-title {
+  color: @txtc;
+  padding: 10px 10px;
+  margin: 10px 10px 5px 10px;
+  font-size: 1.5rem;
+}
+
+.widget-title>button {
+  font-size: 1rem;
+  color: @txtc;
+  padding: 10px;
+  text-shadow: none;
+  background: @bgc;
+  box-shadow: none;
+  border-radius: 5px;
+  transition: all ease .3s;
+}
+
+.widget-title>button:hover {
+  background: #b4befe;
+  color: #fff;
+  transition: all ease .3s;
+}
+
+.widget-label {
+  margin: 10px;
+  background: transparent;
+}
+
+.widget-label>label {
+  font-size: 1rem;
+  color: white;
+  background-color: transparent;
+}
+
+.widget-mpris {
+  padding: 10px;
+  border-radius: 20px;
+  animation: oscilar-rgb 8s ease-in-out infinite;
+}
+
+.widget-mpris button{
+  animation: oscilar-rgb 8s ease-in-out infinite;
+}

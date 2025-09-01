@@ -1,0 +1,5 @@
+preload = ~/wallpaper/gengar.jpg
+
+wallpaper = VGA-1,~/wallpaper/gengar.jpg
+
+splash = true

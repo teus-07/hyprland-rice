@@ -1,0 +1,102 @@
+{
+"hyprland/workspaces": {
+	"active-only": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": 5
+	},
+	"format-icons": {
+		    "active": "<span font='12'>󰮯</span>",
+            "empty": "<span font='8'></span>",
+            "default": "󰊠"
+	}
+},
+
+    "custom/spotify": {
+	    "exec": "python ~/.config/waybar/mediaplayer.py --player spotify",
+	    "format": "{}",
+	    "max-length": 35,
+	    "return-type": "json",
+	    "on-click": "playerctl previous",
+	    "on-click-right": "playerctl next",
+	    "on-click-middle": "playerctl play-pause",
+		"tooltip": false
+		
+    },
+
+    "clock": {   
+	    "format": " {:%A - %d  %b,  %H:%m}", 
+	    "tooltip": "true",
+	    "timezone": "local"    
+    },
+    "cpu": {
+	    "format-icons": "",
+	    "format": "{usage}% <span color=\"#89b4fa\">{icon}</span>",
+	    "tooltip": false
+    },
+    "memory": {
+		"tooltip": false,
+	    "format": "{}%<span color=\"#94e2d5\">  </span>"
+    },
+
+    "network": {
+		"tooltip": false,
+	    "format-icons": "",
+
+	"format-wifi": "{essid} ({signalStrength}%)",
+	"format-ethernet": "<span color=\"#74c7ec\">󰈁</span>",
+	"tooltip-format": "{ifname} via {gwaddr}",
+	"format-linked": "{ifname} (No IP) ",
+	"format-disconnected": "Disconnected "
+    },
+
+    "pulseaudio": {
+	    "tooltip": false,
+	    "scroll-step": 5,
+	    "format": "<span color=\"#f9e2af\">{icon}</span> {volume}%",
+	    "format-muted": "󰖁",
+	    "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	    "format-icons": {
+		    "default": ["", "", ""]
+	    }
+    },
+
+    "custom/power": {
+	    "format": "󰣇",
+	    "on-click":"wlogout",
+	    "tooltip": false
+    },
+    "custom/notification": {
+	    "tooltip": false,
+	    "format": "{icon}",
+	    "format-icons": {
+		    "notification": "  ",
+		    "none": "  ",
+		    "dnd-notification": "  ",
+		    "dnd-none": "  "
+	    },
+	    "return-type": "json",
+	    "exec-if": "which swaync-client",
+	    "exec": "swaync-client -swb",
+	    "on-click": "sleep 0.1 && swaync-client -t -sw",
+	    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+	    "escape": true
+    },
+
+	"custom/l_border": {
+		"format": " ",
+		"interval": "once",
+		"tooltip": false
+	},
+
+	"custom/r_border": {
+		"format": " ",
+		"interval": "once",
+		"tooltip": false
+	}
+}

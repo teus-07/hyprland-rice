@@ -1,0 +1,25 @@
+// -*- mode: jsonc -*-
+{   //"spacing": 1,
+	"layer": "top", // Waybar at top layer
+	"space": 3,
+	"margin-top": 10,
+	"margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+	"height": 30,
+    "modules-left": [  
+		"custom/power",
+	    "hyprland/workspaces",
+	    "custom/spotify"
+		
+    ],
+    "modules-center": [
+	    "clock"
+    ],
+    "modules-right": [ 
+	    "custom/notification","pulseaudio","network", "cpu","memory"
+    ],
+
+	"include": ["~/.config/waybar/modules.json"]
+} 
+
