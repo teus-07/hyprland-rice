@@ -1,0 +1,139 @@
+configuration{
+display-drun:"Aplicativos";
+display-window:"Janelas";
+font: "JetBrainsMono Medium 10";
+modi: "window,run,drun";
+show-icons: true;
+
+}
+
+*{
+ bg: rgb(30, 30, 46, 0.35);
+ bgset: #cba6f7;
+ overlay: rgb(30, 30, 46);
+ text2: #11111b;
+ text: #cdd6f4;
+
+ background-color: @bg;
+ border: 0;
+ margin: 0;
+ spacing: 0;
+}
+
+window{
+    width: 360;
+    height: 35%;
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.1) ;
+    border-radius: 10px;
+    location: center;
+}
+
+mainbox {
+    padding: 10;
+    spacing: 10;
+}
+
+inputbar {
+    background-color: @overlay;
+    border: 1;      
+    border-radius: 8;
+    padding: 12 16;
+    spacing: 0;
+    text-color: @text;
+    children: [ "entry", "case-indicator", "num-filtered-rows", "textbox-num-sep", "num-rows"];
+}
+prompt {
+   
+    background-color: transparent;
+    text-color: white;
+    spacing: 0;
+    text-transform: bold;
+}
+
+textbox-prompt-colon {
+    
+    background-color: transparent;
+    text-color: inherit;
+    margin: 0 0.3em 0 0;
+    expand: false;
+    str: ":";
+}
+
+num-filtered-rows {
+    background-color: transparent;
+    text-color: inherit;
+    expand: false;
+}
+case-indicator {
+    background-color: transparent;
+    text-color: inherit;
+}
+textbox-num-sep {
+    background-color: transparent;
+    text-color: inherit;
+    expand: false;
+    str: "/";
+}
+
+num-rows {
+    background-color: transparent;
+    text-color: inherit;
+    expand: false;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @text;
+}
+
+listview {
+    dynamic: true;
+    scrollbar: true;
+    spacing: 0;
+}
+
+scrollbar {
+    background-color: transparent;
+    padding: 0;
+    margin: 0 0 0 4;
+    handle-width: 8;
+    border: 0;
+    handle-color: #626463; // @white-50
+}
+
+entry{
+    background-color: transparent;
+    margin: 0px 0px 0px 10px;
+     placeholder: "Digite Aqui";
+    cursor: pointer;
+    text-color: @text;
+}
+
+element{
+    text-color: @text;
+    spacing: 10;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 3px 0 ;
+    children: [ element-icon, element-text ];
+}
+
+element-icon {
+    text-color:inherit;
+    background-color: transparent;
+}
+
+element-text{
+    text-color:inherit;
+ background-color: transparent;
+}
+
+element.selected {
+    text-color: @text2;
+    expand: true;
+    padding: 5px;
+    background-color: @bgset;
+}
+
+
